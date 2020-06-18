@@ -72,6 +72,7 @@ function upvoteAdd() {
   upvotePara.textContent = upvoteNumber + 1;
   downvotePara.textContent = downvoteNumber - 1;
   upvoteImg.removeEventListener('click', upvoteAdd);
+  downvoteImg.removeEventListener('click', downvoteAdd);
 }
 
 // Doet +1 op de huidige aantal downvotes
@@ -85,6 +86,7 @@ function downvoteAdd() {
   downvotePara.textContent = downvoteNumber + 1;
   upvotePara.textContent = upvoteNumber - 1;
   downvoteImg.removeEventListener('click', downvoteAdd);
+  upvoteImg.removeEventListener('click', upvoteAdd);
 }
 
 // Alle eventlisteners
