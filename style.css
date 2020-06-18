@@ -1,3 +1,52 @@
 body {
   font-family: cooper-black-std, serif;
+  background-color: lightsteelblue;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 10px;
+  background-color: skyblue;
+  border-radius: 25px;
+}
+
+.joke {}
+
+.votes {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 1fr;
+}
+
+.upvote {
+  display: flex;
+}
+
+.upvote img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.downvote {
+  display: flex;
+}
+
+.downvote img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+button {
+  margin: 0 auto;
 }

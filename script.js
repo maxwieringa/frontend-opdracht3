@@ -1,7 +1,9 @@
 let data = null;
 const header = document.querySelector('header');
 const main = document.querySelector('main');
-const section = document.querySelector('section');
+const section = document.getElementById('joke')
+const upvote = document.getElementById('upvote');
+const downvote = document.getElementById('downvote');
 const newJoke = document.querySelector('button');
 
 const xhr = new XMLHttpRequest();
@@ -35,13 +37,13 @@ function jokeParagraph(jsonObj) {
 function populateUpvotes(jsonObj) {
   const upvotePara = document.createElement('p');
   upvotePara.textContent = jsonObj['upvotes'];
-  section.appendChild(upvotePara);
+  upvote.appendChild(upvotePara);
 }
 
 function populateDownvotes(jsonObj) {
   const downvotePara = document.createElement('p');
   downvotePara.textContent = jsonObj['downvotes'];
-  section.appendChild(downvotePara);
+  downvote.appendChild(downvotePara);
 }
 
 function reload() {
