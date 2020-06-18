@@ -44,4 +44,13 @@ function populateDownvotes(jsonObj) {
   section.appendChild(downvotePara);
 }
 
-//newJoke.addEventListener('click', ;
+function reload() {
+  window.location.reload(true);
+}
+
+newJoke.addEventListener('click', reload);
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode == 32) {
+    reload();
+  }
+});
